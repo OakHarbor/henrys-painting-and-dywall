@@ -1,0 +1,326 @@
+:root {
+    --dark: #000;
+    --medium: #1b1b1b;
+    --dark-light: #2e2e2e;
+}
+
+.gear {
+    position: absolute;
+    width: 25px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+        -ms-transform: translate(-50%, -50%) rotate(180deg);
+            transform: translate(-50%, -50%) rotate(180deg);
+    -webkit-transition: .4s linear;
+    -o-transition: .4s linear;
+    transition: .4s linear;
+}
+
+.gear.release-pressure {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+        -ms-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+    -webkit-transition: .4s linear;
+    -o-transition: .4s linear;
+    transition: .4s linear;
+}
+
+.dark-mode-button {
+    background: transparent;
+    border: none;
+    height: 40px;
+    width: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.top-dark-mode-button {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    z-index: 10;
+    -webkit-transition: .3s ease-in;
+    -o-transition: .3s ease-in;
+    transition: .3s ease-in;
+}
+
+.top-dark-mode-button .dark-toggle {
+    background: rgb(230, 230, 230);
+    border-color: rgb(230, 230, 230);
+    width: 35px;
+}
+
+.top-dark-mode-button:after {
+    content: 'DARK';
+    position: absolute;
+    color: #fff;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: 22px;
+    top: 10px;
+    -webkit-transition: .1s ease-in;
+    -o-transition: .1s ease-in;
+    transition: .1s ease-in;
+}
+
+body.dark-mode .top-dark-mode-button:after {
+    content: 'LIGHT';
+    color: var(--primary);
+    top: 12px;
+}
+
+.dark-toggle {
+    margin: 0;
+    width: 30px;
+    height: 16px;
+    z-index: 20;
+    border-radius: 10px;
+    background: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 1000;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    align-items: center;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+body.dark-mode .dark-toggle {
+    background: rgb(34,34,34);
+    background: -webkit-gradient(linear, right top, left top, color-stop(46%, rgba(34,34,34,1)), to(rgba(168,118,19,1)));
+    background: -o-linear-gradient(right, rgba(34,34,34,1) 46%, rgba(168,118,19,1) 100%);
+    background: linear-gradient(270deg, rgba(34,34,34,1) 46%, rgba(168,118,19,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#222222",endColorstr="#a87613",GradientType=1);
+    border: none;
+    -webkit-transition: .9s ease-in-out;
+    -o-transition: .9s ease-in-out;
+    transition: .9s ease-in-out;
+}
+
+.dark-toggle span {
+    height: 20px;
+    width: 20px;
+    left: -2px;
+    border-radius: 50%;
+    background: #000;
+    position: absolute;
+    -webkit-transition: .3s linear;
+    -o-transition: .3s linear;
+    transition: .3s linear;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+body.dark-mode .dark-toggle span {
+    left: 15px;
+    -webkit-transition: .3s linear;
+    -o-transition: .3s linear;
+    transition: .3s linear;
+}
+
+.top-dark-mode-button .dark-toggle {
+    background: rgb(34,34,34);
+    background: -webkit-gradient(linear, left top, right top, color-stop(22%, rgba(34,34,34,1)), to(rgba(168,118,19,1)));
+    background: -o-linear-gradient(left, rgba(34,34,34,1) 22%, rgba(168,118,19,1) 100%);
+    background: linear-gradient(90deg, rgba(34,34,34,1) 22%, rgba(168,118,19,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#222222",endColorstr="#a87613",GradientType=1);
+    width: 35px;
+    -webkit-transition: .9s ease-in-out;
+    -o-transition: .9s ease-in-out;
+    transition: .9s ease-in-out;
+}
+
+
+/* Begin adding your dark mode styles here, like so: */
+
+body.dark-mode {
+    background: #000
+}
+
+body.dark-mode p,
+body.dark-mode li {
+    color: #fff;
+    opacity: .7;
+}
+
+/* home page */
+
+body.dark-mode #service-section {
+    background: url("/images/faded-texture-dark-mobile.png");
+}
+
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #fff;
+    opacity: .85;
+}
+
+body.dark-mode .right-card h3 {
+    color: var(--primary);
+    opacity: .85;
+}
+
+body.dark-mode .button-white {
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    color: #fff;
+}
+
+body.dark-mode .button-white:before {
+    background: #fff;
+}
+
+body.dark-mode .button-white:after {
+    background: #fff;
+}
+
+body.dark-mode .seal {
+    display: none;
+}
+
+body.dark-mode .seal2 {
+    display: none;
+}
+
+body.dark-mode .mobile-dark {
+    display: block;
+    opacity: .5;
+    z-index: -1;
+}
+
+body.dark-mode .desktop-dark {
+    display: none;
+    opacity: .5;
+    z-index: -1;
+}
+
+body.dark-mode #why-us {
+    background: url("/images/faded-texture-dark-mobile.png");
+}
+
+body.dark-mode #frequently-asked-questions {
+    background: var(--medium);
+}
+
+body.dark-mode .button-white:hover {
+    background: #fff;
+    color: #000;
+}
+
+body.dark-mode .faq-group:after {
+    background: url('/images/why-choose-dark.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+}
+
+/* About page */
+
+body.dark-mode #our-story {
+    background: url("/images/faded-texture-dark-mobile.png");
+}
+
+body.dark-mode .about-container img {
+    border: none;
+}
+
+body.dark-mode .number-item h3 {
+    color: var(--primary);
+}
+
+body.dark-mode .top-square {
+    background: url("/images/faded-texture-dark-mobile.png");
+}
+
+body.dark-mode .top-square h2 {
+    color: var(--primary);
+}
+
+/* services */
+
+body.dark-mode #services {
+    background: url("/images/faded-texture-dark-mobile.png");
+}
+
+/* portfolio */
+
+body.dark-mode #gallery {
+    background: url("/images/faded-texture-dark-mobile.png");
+}
+
+/* contact */
+
+body.dark-mode #wrapper {
+    background: url("/images/faded-texture-dark-mobile.png");
+}
+
+body.dark-mode #contact h3 {
+    color: #fff;
+    opacity: .85;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .top-dark-mode-button {
+        top: 84px;
+        right: 25px;
+        z-index: 10000;
+    }
+
+    .mobile-dark {
+        display: none !important;
+    }
+
+    .desktop-dark {
+        display: block !important;
+    }
+
+    body.dark-mode #why-us .desktop-dark {
+        opacity: .05;
+    }
+}
+
+@media screen and (min-width: 1710px) {
+
+    .top-dark-mode-button {
+        top: 84px;
+        left: 50%;
+        margin-left: 760px;
+        z-index: 10000;
+    }
+}
