@@ -619,6 +619,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .mobile-wrapper img {
         height: 200px;
+        width: auto;
         -webkit-transform: translateY(50px);
             -ms-transform: translateY(50px);
                 transform: translateY(50px);
