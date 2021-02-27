@@ -1,52 +1,38 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
 
 /*-- -------------------------- -->
 <---           LANDING          -->
 <--- -------------------------- -*/
 
-/* DARK MODE */
-.number-item h4.dark-mode {
-    color: var(--primary);
+.desktop {
+    display: none;
 }
-
-.square h2.dark-mode {
-    color: var(--primary) !important;
-}
-
-body.dark-mode {
-    background: var(--dark) !important;
-}
-
-.dark-comb.dark-mode {
-    z-index: 1000 !important;
-}
-
-/* END DARK MODE */
 
 #hero {
-    min-height: 400px;
-    height: 400px;
-    background: url('/images/about-mobile.jpg');
+    min-height: 300px;
+    height: 300px;
+    background: url('/images/wood-texture-mobile.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
 
-#dark {
-    background: #000;
+#hero:before {
+    content: '';
     position: absolute;
-    top: 0;
-    left: 0;
     height: 100%;
     width: 100%;
-    z-index: 20;
-    opacity: .7;
+    background: rgb(74,75,82);
+        background: -o-radial-gradient(circle, rgba(74,75,82,0.6839110644257703) 9%, rgba(0,0,0,1) 100%);
+        background: radial-gradient(circle, rgba(74,75,82,0.6839110644257703) 9%, rgba(0,0,0,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4a4b52",endColorstr="#000000",GradientType=1);
+    top: 0;
+    left: 0;
 }
 
 #home-h {
-    width: 200px;
+    width: 100%;
     text-align: center;
-    font-size: 3.4375em;
+    font-size: 2.438em;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -57,34 +43,24 @@ body.dark-mode {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    z-index: 100;
+    z-index: 7;
+    margin: auto;
+    font-family: 'Vast Shadow', cursive;
+    font-weight: normal;
+    margin-top: 90px;
 }
 
 #home-h:before {
     content: '';
     position: absolute;
-    width: 180px;
-    height: 200px;
-    border: 10px solid rgba(222, 43, 27, .4);
+    width: 70%;
+    height: 80px;
+    border: 10px solid rgba(206, 150, 39, .4);
     z-index: -1;
 }
 
-.white-comb {
-    position: absolute;
-    width: 100%;
-    bottom: -2px;
-    z-index: 100;
-}
-
-.white-comb.dark-mode {
-    display: none !important;
-}
-
-.dark-comb.dark-mode {
-    display: block;
-    position: absolute;
-    bottom: -2px;
-    z-index: 100;
+#hero img {
+    display: none;
 }
 
 /*-- -------------------------- -->
@@ -93,11 +69,18 @@ body.dark-mode {
 
 #our-story {
     padding: 50px 0;
+    background: url("/images/faded-texture-mobile.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .about-container img {
     width: 100%;
     margin: 0px auto 30px auto;
+    border: 12px solid #fff;
+    -webkit-box-shadow: 10px 10px 34px -21px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 34px -21px rgba(0,0,0,0.75);
 }
 
 .about-group p:first-child {
@@ -105,8 +88,8 @@ body.dark-mode {
 }
 
 .about-group h2 {
-    margin-bottom: 5px;
-    font-size: 1.875em;
+    margin-bottom: 10px;
+    font-size: 2.143em;
 }
 
 .about-group span {
@@ -131,15 +114,15 @@ body.dark-mode {
     width: 30px;
     margin-right: 15px;
     height: auto;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
 }
 
 .right {
     height: 2px;
     width: 200px;
-    background: #f9f9f9;
-    -webkit-transform: translateY(10px);
-        -ms-transform: translateY(10px);
-            transform: translateY(10px);
+    background: var(--light);
 }
 
 .first-p {
@@ -156,6 +139,10 @@ body.dark-mode {
     margin-top: 40px;
 }
 
+.number-item h4 {
+    font-family: 'Oswald', sans-serif;
+}
+
 .number-item:last-child {
     margin-bottom: 0px;
     padding-bottom: 0;
@@ -163,7 +150,7 @@ body.dark-mode {
 
 .number-item h3 {
     color: var(--primary);
-    font-size: 2.1875em;
+    font-size: 2.500em;
     font-weight: 900;
     margin-bottom: 10px;
 }
@@ -173,7 +160,7 @@ body.dark-mode {
 <--- -------------------------- -*/
 
 #qualities {
-    background: url("/images/image-15.jpg");
+    background: url("/images/qualities-mobile.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -188,11 +175,7 @@ body.dark-mode {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgb(41,162,228);
-    background: rgb(58,80,92);
-    background: -o-radial-gradient(circle, rgba(58,80,92,1) 0%, rgba(34,58,71,1) 0%, rgba(9,36,51,1) 84%);
-    background: radial-gradient(circle, rgba(58,80,92,1) 0%, rgba(34,58,71,1) 0%, rgba(9,36,51,1) 84%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3a505c",endColorstr="#092433",GradientType=1);
+    background: #000;
     opacity: .85;
 }
 
@@ -264,7 +247,7 @@ body.dark-mode {
 
 .quality-item h3 {
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.500em;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -294,7 +277,7 @@ body.dark-mode {
     height: 400px;
     width: 100%;
     margin-bottom: 50px;
-    background: url("/images/tools2.jpg");
+    background: url("/images/mission-mobile.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -324,15 +307,19 @@ body.dark-mode {
     padding-left: 36px;
     padding-top: 30px;
     position: relative;
+    background: url("/images/faded-texture-mobile.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .top-square h2 {
-    font-size: 1.875em;
+    font-size: 1.750em;
     margin-bottom: 20px;
     color: var(--primary);
 }
 
-.top-square h3 {
+main p {
     font-size: 1.125em;
     font-weight: normal;
     line-height: 1.7em;
@@ -363,7 +350,7 @@ body.dark-mode {
     height: 400px;
     width: 100%;
     margin-bottom: 50px;
-    background: url("/images/deck.jpg");
+    background: url("/images/room.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -394,7 +381,7 @@ body.dark-mode {
 }
 
 .middle-square h2 {
-    font-size: 1.875em;
+    font-size: 1.667em;
     margin-bottom: 20px;
     color: var(--primary);
 }
@@ -421,7 +408,7 @@ body.dark-mode {
     height: 400px;
     width: 100%;
     margin-bottom: 50px;
-    background: url("/images/mission.jpg");
+    background: url("/images//img-2-compressor.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -452,7 +439,8 @@ body.dark-mode {
 }
 
 .bottom-square h2 {
-    font-size: 1.875em;
+    font-size: 1.667em
+    ;
     margin-bottom: 20px;
     color: var(--primary);
 }
@@ -473,7 +461,7 @@ body.dark-mode {
 }
 
 #meet-the-team h2 {
-    font-size: 40px;
+    font-size: 2.222em;
     margin-bottom: 30px;
     text-transform: uppercase;
 }
@@ -511,7 +499,7 @@ body.dark-mode {
 }
 
 .team-card p:first-child {
-    font-size: 1.3125em;
+    font-size: 1.313em;
     font-weight: 800;
     font-family: 'Montserrat', sans-serif;
 }
@@ -535,37 +523,42 @@ body.dark-mode {
 
 
 /* Tablets */
-@media screen and (min-width: 500px) and (max-width: 1024px) {
+@media screen and (min-width: 500px) and (max-width: 1023px) {
 
-    #hero {
+   #hero {
         position: relative;
-        height: 600px;
+        height: 700px;
     }
 
     #home-h {
-        font-size: 4.375em;
-        margin-bottom: 0;
+        font-size: 3.500em;
     }
 
     #hero img {
         display: block;
         position: absolute;
         width: 100%;
-        bottom: 0;
+        bottom: -1px;
         z-index: 40;
-    }
-
-    .white-comb {
-        position: absolute;
-        bottom: -2px !important;
     }
 
     /*-- -------------------------- -->
     <---         OUR STORY          -->
     <--- -------------------------- -*/
 
+    #our-story {
+        padding-top: 100px;
+    }
+
     .about-group h2 {
-        margin-bottom: 5px;
+        margin-bottom: 15px;
+    }
+
+    .about-container img {
+        width: 300px;
+        border: 7px solid #fff;
+        -webkit-box-shadow: 10px 10px 34px -21px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 34px -21px rgba(0,0,0,0.75);
     }
 
     .bee-line {
@@ -576,6 +569,10 @@ body.dark-mode {
     .first-p {
         margin-bottom: 15px;
     } 
+
+    .right {
+        width: 400px;
+    }
 
     .number-group {
         display: -webkit-box;
@@ -654,6 +651,7 @@ body.dark-mode {
 
     .right-square {
         width: 50%;
+        background: url("/images/image-4.JPG");
     }
 
     .top-square svg {
@@ -795,25 +793,24 @@ body.dark-mode {
 }
 
 /* Desktop */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
 
     /*-- -------------------------- -->
     <---          LANDING           -->
     <--- -------------------------- -*/
 
     #hero {
-        background: url("/images/image-38.jpg");
         height: 600px;
-        background-position: center 60%;
-        background-attachment: fixed;
+        background-attachment: fixed !important;
         position: relative;
+        background: url("/images/wood-texture.jpg");
     }
 
     #home-h {
-        -webkit-transform: translateY(40px);
-            -ms-transform: translateY(40px);
-                transform: translateY(40px);
         font-size: 4.375em;
+        -webkit-transform: translateY(50px);
+            -ms-transform: translateY(50px);
+                transform: translateY(50px);
     }
 
     #hero img {
@@ -831,6 +828,8 @@ body.dark-mode {
     #our-story {
         padding-top: 100px;
         padding-bottom: 100px;
+        background: url("/images/faded-texture-desktop.png");
+        background-attachment: fixed;
     }
 
     .about-container {
@@ -850,8 +849,11 @@ body.dark-mode {
     }
 
     .about-container img {
-        height: 500px;
-        width: auto;
+        height: 400px;
+        width: 350px;
+        border: 12px solid #fff;
+        -webkit-box-shadow: 10px 10px 34px -21px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 34px -21px rgba(0,0,0,0.75);
     }
 
     .about-group {
@@ -894,8 +896,9 @@ body.dark-mode {
     #qualities {
         padding-top: 200px;
         padding-bottom: 200px;
-        background-attachment: fixed !important;
-        background: url("/images/house.jpg");
+        background: url("/images/qualities-desktop.jpg");
+        background-attachment: fixed;
+        background-position: center 70%;
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -961,22 +964,28 @@ body.dark-mode {
             -ms-flex-pack: center;
                 justify-content: center;
         padding-top: 50px;
-        padding-left: 80px;
+        padding-left: 50px;
+        background: url("/images/faded-texture-desktop.png");
+        background-attachment: fixed;
     }
 
     .top-square h2 {
-        font-size: 2.8125em;
+        font-size: 2.813em;
     }
 
-    .top-square h3 {
+    .top-square p {
         width: 440px;
-        font-size: 1.5625em;
+        font-size: 1.563em;
     }
 
     .right-square {
         width: 50%;
         height: 700px;
         margin: 0;
+        background: url('/images/mission-desktop.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     /*-- -------------------------- -->
@@ -1022,13 +1031,13 @@ body.dark-mode {
     .middle-square h2 {
         text-align: right;
         width: 100%;
-        font-size: 2.8125em;
+        font-size: 2.813em;
     }
 
     .middle-square h3 {
         width: 440px;
         text-align: right;
-        font-size: 1.5625em;
+        font-size: 1.563em;
     }
 
     .left-square {
@@ -1083,13 +1092,13 @@ body.dark-mode {
     .bottom-square h2 {
         text-align: left;
         width: 100%;
-        font-size: 2.8125em;
+        font-size: 2.813em;
     }
 
     .bottom-square h3 {
         width: 440px;
         text-align: left;
-        font-size: 1.5625em;
+        font-size: 1.563em;
     }
 
     .right-square-bottom {
